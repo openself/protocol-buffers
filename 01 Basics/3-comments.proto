@@ -1,0 +1,17 @@
+// Using proto3 syntax
+syntax = "proto3";
+
+/* Person is used to identify users
+ * across the system */
+message Person {
+    // the calculated user's age
+    int32 age = 1;
+    string first_name = 2;
+    string last_name = 3;
+    bytes small_picture = 4; // from profile icon .jpg
+    bool is_profile_verified = 5;
+    float height = 6; // in Cm
+
+    // a list of phone numbers
+    repeated string phone_numbers = 7;
+}
